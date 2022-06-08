@@ -1,4 +1,6 @@
 {
     "mongoURI" : "mongodb+srv://vagan123:vagan123@devconnector.7tlqc.mongodb.net/?retryWrites=true&w=majority",
-    "jwtSecret": "mysecrettoken"
+    "jwtSecret": "mysecrettoken",
+    "githubClientId": "54c9dbe5664d5c7df2ad",
+    "githubSecret": "938e08558d4fd39132ce25f290e959d9909d8fc1"
 }
