@@ -12,7 +12,7 @@ function App() {
       <Fragment>
         <NavBar />
         <Routes>
-          <Route path='/' element={<Landing />} />
+          <Route exact path='/' element={<Landing />} />
         </Routes>
         <section className='container'>
           <Routes>
