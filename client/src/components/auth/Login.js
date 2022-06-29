@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export const Login = () => {
+const Login = () => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -50,8 +50,10 @@ export const Login = () => {
         <input type='submit' className='btn btn-primary' value='Register' />
       </form>
       <p className='my-1'>
-        Already have an account? <Link to='/register'>Sign In</Link>
+        Already have an account? <Link to='/register'>Sign Up</Link>
       </p>
     </Fragment>
   );
 };
+
+export default Login;
