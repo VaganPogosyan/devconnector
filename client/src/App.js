@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import NavBar from './components/layout/NavBar';
+import Navbar from './components/layout/Navbar';
 import Landing from './components/layout/Landing';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
@@ -26,7 +26,7 @@ const App = () => {
     <Provider store={store}>
       <Router>
         <Fragment>
-          <NavBar />
+          <Navbar />
           <Routes>
             <Route exact path='/' element={<Landing />} />
           </Routes>
