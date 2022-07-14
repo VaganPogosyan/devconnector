@@ -4,37 +4,37 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createProfile } from '../../actions/profile';
 
-const initialState = {
-  company: '',
-  website: '',
-  location: '',
-  status: '',
-  skills: '',
-  githubusername: '',
-  bio: '',
-  twitter: '',
-  facebook: '',
-  linkedin: '',
-  youtube: '',
-  instagram: '',
-};
+// const initialState = {
+//   company: '',
+//   website: '',
+//   location: '',
+//   status: '',
+//   skills: '',
+//   githubusername: '',
+//   bio: '',
+//   twitter: '',
+//   facebook: '',
+//   linkedin: '',
+//   youtube: '',
+//   instagram: '',
+// };
 
 const CreateProfile = ({ createProfile }) => {
-  const [formData, setFormData] = useState(initialState);
-  // const [formData, setFormData] = useState({
-  //   company: '',
-  //   website: '',
-  //   location: '',
-  //   status: '',
-  //   skills: '',
-  //   githubusername: '',
-  //   bio: '',
-  //   twitter: '',
-  //   facebook: '',
-  //   linkedin: '',
-  //   youtube: '',
-  //   instagram: '',
-  // });
+  // const [formData, setFormData] = useState(initialState);
+  const [formData, setFormData] = useState({
+    company: '',
+    website: '',
+    location: '',
+    status: '',
+    skills: '',
+    githubusername: '',
+    bio: '',
+    twitter: '',
+    facebook: '',
+    linkedin: '',
+    youtube: '',
+    instagram: '',
+  });
 
   const [displaySocialInputs, toggleSocialInputs] = useState(false);
 
@@ -121,7 +121,7 @@ const CreateProfile = ({ createProfile }) => {
             onChange={(e) => onChange(e)}
           />
           <small className='form-text'>
-            City & state suggested (eg. Boston, MA)
+            City and state suggested (eg. Boston, MA)
           </small>
         </div>
         <div className='form-group'>

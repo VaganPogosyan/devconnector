@@ -82,7 +82,7 @@ export const getGithubRepos = (username) => async (dispatch) => {
   }
 };
 
-// Creeate or update profile
+// Create or update profile
 export const createProfile =
   (formData, navigate, edit = false) =>
   async (dispatch) => {
