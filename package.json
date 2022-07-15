@@ -24,6 +24,7 @@
     "config": "^3.3.7",
     "express": "^4.18.1",
     "express-validator": "^6.14.1",
+    "gh-account-exists": "^0.1.0",
     "gravatar": "^1.8.2",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.3.5",
