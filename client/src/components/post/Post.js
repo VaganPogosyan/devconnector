@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import PostItem from '../posts/PostItem';
 import Spinner from '../layout/Spinner';
 import { getPost } from '../../actions/post';
+import CommentForm from './CommentForm';
 
 const Post = ({ getPost, post: { post, loading } }) => {
   const { id } = useParams();
@@ -19,6 +20,7 @@ const Post = ({ getPost, post: { post, loading } }) => {
     <Fragment>
       <Link to='/posts'>Go Back To Posts</Link>
       <PostItem post={post} showActions={false} />
+      <CommentForm postId={post._id} />
     </Fragment>
   );
 };
