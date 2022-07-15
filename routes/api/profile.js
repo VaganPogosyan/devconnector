@@ -11,6 +11,7 @@ const Post = require('../../models/Post');
 const { check, validationResult } = require('express-validator');
 const { profile } = require('console');
 const { remove } = require('../../models/Profile');
+const ghAccountExists = require('gh-account-exists');
 
 // @route    GET api/profile/me
 // @desc     Get current user's profile
@@ -74,7 +75,8 @@ router.post(
     if (location) profileFields.location = location;
     if (bio) profileFields.bio = bio;
     if (status) profileFields.status = status;
-    if (githubusername) profileFields.githubusername = githubusername;
+    if (githubusername && githubusername)
+      profileFields.githubusername = githubusername;
     if (skills) {
       profileFields.skills = skills
         .toString()
@@ -299,10 +301,9 @@ router.delete('/education/:edu_id', auth, async (req, res) => {
 // @access   Public
 router.get('/github/:username', (req, res) => {
   try {
+    const username = req.params.username.trim();
     const options = {
-      uri: `https://api.github.com/users/${
-        req.params.username
-      }/repos?per_page=5&sort=created:asc&client_id=${config.get(
+      uri: `https://api.github.com/users/${username}/repos?per_page=5&sort=created:asc&client_id=${config.get(
         'githubClientId'
       )}&client_secret=${config.get('githubSecret')}`,
       method: 'GET',
@@ -310,7 +311,7 @@ router.get('/github/:username', (req, res) => {
     };
 
     request(options, (error, response, body) => {
-      if (error) console.error(err.message);
+      if (error) console.error(err.message, 'GITHUUUUUB');
 
       if (response.statusCode !== 200) {
         return res.status(400).json({ msg: 'No Github profile found' });

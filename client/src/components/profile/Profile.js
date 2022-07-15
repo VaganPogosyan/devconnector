@@ -20,7 +20,10 @@ const Profile = ({ getProfileById, profile: { profile, loading }, auth }) => {
   return (
     <Fragment>
       {profile === null || loading ? (
-        <Spinner />
+        <div>
+          <h1>Spinning</h1>
+          <Spinner />
+        </div>
       ) : (
         <Fragment>
           <Link to='/profiles' className='btn btn-light'>
