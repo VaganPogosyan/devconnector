@@ -36,12 +36,12 @@ const App = () => {
     <Provider store={store}>
       <Router>
         <Fragment>
-          <Navbar />
+          {/* <Navbar /> */}
+          <Alert />
           <Routes>
             <Route exact path='/' element={<Landing />} />
           </Routes>
           <section className='container'>
-            <Alert />
             <Routes>
               <Route path='/register' element={<Register />} />
               <Route path='/login' element={<Login />} />
