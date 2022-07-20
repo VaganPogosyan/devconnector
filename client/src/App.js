@@ -38,9 +38,9 @@ const App = () => {
         <Fragment>
           <NavBar />
           <Routes>
-            <Alert />
             <Route exact path='/' element={<Landing />} />
           </Routes>
+          <Alert />
           <section className='container'>
             <Routes>
               <Route path='/register' element={<Register />} />
