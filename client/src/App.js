@@ -40,8 +40,8 @@ const App = () => {
           <Routes>
             <Route exact path='/' element={<Landing />} />
           </Routes>
-          <Alert />
           <section className='container'>
+            <Alert />
             <Routes>
               <Route path='/register' element={<Register />} />
               <Route path='/login' element={<Login />} />
